@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var contaCorrenteEx_1 = require("./classes/contaCorrenteEx");
+var pessoaFiscaEx_1 = require("./classes/pessoaFiscaEx");
+var pessoaJuridicaEx_1 = require("./classes/pessoaJuridicaEx");
+var clientePF = new pessoaFiscaEx_1.pessoaFiscaEx("jean", "pinto", "123");
+var clientePF2 = new pessoaFiscaEx_1.pessoaFiscaEx("xxx", "xxx", "xxx");
+var contaPF = new contaCorrenteEx_1.contaCorrenteEx();
+console.log("Cliente Pessoa fisica");
+contaPF.adicionaCorrentistaPF(clientePF);
+contaPF.adicionaCorrentistaPF(clientePF2);
+console.log(contaPF.imprimirDadosPF());
+console.log("\n\nCliente Pessoa juridica");
+var clientePJ = new pessoaJuridicaEx_1.pessoaJuridicaEx("JEAN", "MALAVASI", "321", 500);
+var clientePJ2 = new pessoaJuridicaEx_1.pessoaJuridicaEx("yyy", "yyy", "yyy", 1000);
+var contaPJ = new contaCorrenteEx_1.contaCorrenteEx();
+contaPJ.adicionarCorrentistaPJ(clientePJ);
+contaPJ.adicionarCorrentistaPJ(clientePJ2);
+console.log(contaPJ.imprimirDadosPJ());
+//# sourceMappingURL=main.js.map
